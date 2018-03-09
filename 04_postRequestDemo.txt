@@ -1,0 +1,21 @@
+Section 24 Lecture 239 + 240
+Post Requests Part 1 and Part 2
+
+- Write post routes
+- Use a form to send a post request
+- Use body parser to get form data
+- Install body-parser
+  - npm install body-parser
+- Tell the app to use body-parser
+  - *** In the app.js file :
+    let bodyParser = require("body-parser");
+    app.use(bodyParser.urlencoded({extended: true}));
+    
+    app.post("/<post route>", function(request, response){    
+    response.redirect("/<route>");
+    });
+  - *** In the <filename>.ejs
+    <form action="/<post route>" method="POST">
+      <input type="text" name="<someVariable" placeholder="name">
+      <button>Click to make new friend!</button>
+    </form>
